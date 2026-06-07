@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive onboarding dashboard displaying the engineering team profile gallery. Learn Git branching, merging, and collaboration.">
+  <title>Engineering Team Gallery & Onboarding Dashboard</title>
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+  <!-- Decorative background shapes -->
+  <div class="blob blob-purple"></div>
+  <div class="blob blob-blue"></div>
+
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <span class="logo-icon">⚡</span>
+        <div>
+          <h1 id="app-title">Team Gallery</h1>
+          <p class="subtitle">Git Onboarding Workspace</p>
+        </div>
+      </div>
+      
+      <div class="controls-area">
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle light/dark theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-content">
+    <!-- Filter and Search Section -->
+    <section class="search-section card glass">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search team members by name or skills..." aria-label="Search team members">
+      </div>
+      <div class="filter-wrapper">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All Roles</button>
+        <button class="filter-btn" data-filter="mentor" id="filter-mentor">Mentors</button>
+        <button class="filter-btn" data-filter="intern" id="filter-intern">Interns</button>
+      </div>
+    </section>
+
+    <!-- Intern Git Contribution Progress Tracker -->
+    <section class="onboarding-status card glass">
+      <div class="status-header">
+        <h2>Onboarding Progress Roster</h2>
+        <span class="progress-badge" id="progress-text">1 / 6 Active</span>
+      </div>
+      <p class="status-desc">This roster updates dynamically as team members submit their profiles via clean merges and resolve conflicts in the team repository.</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar" style="width: 16.6%;"></div>
+      </div>
+      <ul class="roster-grid" id="roster-list">
+        <!-- Roster lists will load here -->
+      </ul>
+    </section>
+
+    <!-- Cards Grid -->
+    <section class="gallery-section">
+      <div class="cards-grid" id="cards-container">
+        <!-- Profile cards will be dynamically injected here -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading the roster and profiles...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>© 2026 Git Onboarding Program • Git Practice Sandbox</p>
+      <div class="links">
+        <a href="../TRAINING_PLAN.md" target="_blank" class="footer-link">📖 View Git Syllabus</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Web App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
