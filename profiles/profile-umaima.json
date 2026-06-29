@@ -1,0 +1,8 @@
+{
+  "id": "A",
+  "name": "Umaima",
+  "role": "Intern",
+  "bio": "Guiding the next generation of engineers. Love clean code, system architecture, and git-based workflows.",
+  "skills": ["System Design", "Git & CI/CD", "Node.js", "Docker"],
+  "avatarUrl": "https://api.dicebear.com/7.x/adventurer/svg?seed=Alex"
+}
